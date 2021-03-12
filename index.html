@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel ="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="../Project1QA/img/note.png" type="image/gif" sizes="16x16">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gig Diary</title>
 </head>
 <body>
 
-
+<!-- navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#hero">Gig Tracker</a>
@@ -26,19 +29,19 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#main">View Gigs</a>
+                <a class="nav-link active" aria-current="page" href="#output">View Gigs</a>
               </li>
               
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Edit Gigs
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Gig</a></li>
-                  <li><a class="dropdown-item" href="#">Update Gig</a></li>
-                  <li><a class="dropdown-item" href="#">Delete Gig</a></li>
+                  <li><a class="dropdown-item" href="#main">Add Gig</a></li>
+                  <li><a class="dropdown-item" href="#output">Update Gig</a></li>
+                  <li><a class="dropdown-item" href="#ouput">Delete Gig</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">View All Gigs</a></li>
+                  <li><a class="dropdown-item" href="#main">View All Gigs</a></li>
                 </ul>
               </li>
               
@@ -50,51 +53,18 @@
 
 
 
-      <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
 
      
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Put a form to add data in
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
 
 
 
+      <!-- Big background hero image holder -->
     <div class ="hero_image" id="hero">
         <div class ="hero_text col-6">
             <h1>Let's Party</h1>
@@ -110,9 +80,9 @@
           <div class="content">
         <h1 class="title">Upcoming Gigs</h1>
         
-        <p>This will be the data</p>
         
-
+        
+<!-- Page content - the cards and form for entering data -->
         <div class="mainContent centre">
         <form id="gigEntryForm">
           <label for ="artist" class="form-control">Artist </label>
@@ -194,6 +164,11 @@
         </div>
       </div>
     </div>
+
+    <footer>
+      <p>Aimee Holdsworth 2021 - BAE/QA Project1</p>
+      
+    </footer>
 
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
