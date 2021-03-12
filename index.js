@@ -1,25 +1,11 @@
 "use strict"
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
-
-
-
 /* Card JS */
 var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 
 let id;
 const output = document.getElementById("output");
+
 
 function getAllGigs() {
   axios.get("http://localhost:8080/getAllGigs/")
@@ -37,9 +23,10 @@ function getAllGigs() {
 
 
 
-
+// print content onto the page with this function
 function renderGig(gig) {
   const newLine = document.createElement("div");
+  
   newLine.className = "col";
 
   const newGig = document.createElement("div");
@@ -63,15 +50,15 @@ function renderGig(gig) {
   restOfGig.innerHTML += "<br>";
   restOfGig.innerHTML += "Date: " + gig.gigDate;
   restOfGig.innerHTML += "<br>";
-  restOfGig.innerHTML += "Time: " + gig.gigTime;
+  restOfGig.innerHTML += "Time: " + gig.gigTime + "pm";
   gigBody.appendChild(restOfGig);
 
   const gigFooter = document.createElement("div");
   gigFooter.className = "card-footer";
   newGig.appendChild(gigFooter);
 
-  const deleteButton = document.createElement("a");
-  deleteButton.className = "card-link";
+  const deleteButton = document.createElement("button");
+  deleteButton.className = "card-link-delete";
   deleteButton.innerText = "Delete";
   deleteButton.addEventListener('click', function () {
     deleteGig(gig.id);
@@ -107,17 +94,16 @@ function deleteGig(id) {
 document.getElementById("gigEntryForm").addEventListener('submit', function (event) {
   event.preventDefault();
 
-  console.log("this: ", this);
-  console.log("this.artist:", this.artist);
-  console.log("this.city:", this.city);
 
   const data = {
     artist: this.artist.value,
     city: this.city.value,
     venue: this.venue.value,
     gigDate: this.gigDate.value,
-    gigTime: this.gigTime.value
+    gigTime: this.gigTime.value 
   };
+
+  
 
   axios.post("http://localhost:8080/createGig", data, {
     headers: {
@@ -137,7 +123,7 @@ document.getElementById("gigEntryForm").addEventListener('submit', function (eve
 
 document.getElementById("updateForm").addEventListener('submit', function (event) {
   event.preventDefault();
-
+//overwrite the data so it updates
   const data = {
     artist: this.newArtist.value,
     city: this.newCity.value,
@@ -179,20 +165,9 @@ function updateGig(id, newArtist, newCity, newVenue, newGigDate, newGigTime) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 getAllGigs();
+
+
+
+
+

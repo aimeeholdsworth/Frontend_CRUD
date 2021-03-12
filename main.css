@@ -42,6 +42,7 @@ body, html {
     border-radius: 20px;
     padding:100px;
     text-align: center;
+    color: #497A72;
     
     
     
@@ -59,31 +60,50 @@ body, html {
 
  .navbar{
    box-shadow:#888888 ;
-   
-   
+   text-transform: uppercase;
+      
  }
+
+ #navbarSupportedContent > ul > li > a:hover{ 
+  
+  border-bottom: 2px solid #212121;
+ }
+
+
+ #navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
 
  
 
  .content{
-  background: linear-gradient(90deg, white 50%,grey 50%);
+  background: linear-gradient(90deg,#EDEFEF 50%, #497A72 50%);
+  padding: 70px 0 70px 0;
  }
 
  .mainContent{
    background-color: white;
-   box-shadow: 5px 10px 8px 10px #888888;
+   box-shadow: 0px 0px 40px 8px rgb(0 0 0 / 20%)
    
+ }
+
+ #main > div{
+   padding-top:50px;
  }
 
  .explore{
    margin-top:300px;
    border-radius: 25px;
    background-color: white;
-   color:grey;
+   color: #497A72;
    border: solid white 5px;
    width: 200px;
    font-size: 20px;
    font-weight: bold;
+   font-family: 'Raleway', sans-serif;
  }
 
  .explore:hover{
@@ -93,7 +113,109 @@ body, html {
  }
 
 
+ #gigEntryForm > label, #updateForm >label{
+   margin-bottom: 2px;
+   border:none;
+
+ }
+
+ #gigEntryForm > input, #updateForm > label{
+   margin-bottom: 5px;
+ }
+
+ p, form{
+   font-family: 'Raleway', sans-serif;
+ }
+  
+.card-footer{
+  background-color: #6A94C4;
+}
+
+
+button.card-link, #updateForm > button:nth-child(12){
+  background-color: transparent;
+  color:#497A72;
+  
+  font-family: 'Raleway';
+  border: none;
+  font-weight: bold;
+  margin-top:4px;
+}
+
+
+button.card-link:hover{
+  border-bottom: 2px solid #497A72;
+}
+
+ #updateForm > button:nth-child(12):hover{
   
 
+  background-color: #497A72;
+  border-radius: 4px;
+  color: white;
+}
+
+button.card-link-delete, #updateForm > button:nth-child(11){
+  background-color: transparent;
+  color:#545D68;
+  
+  font-family: 'Raleway';
+  border: none;
+  font-weight: bold;
+  margin-top:4px;
+}
+
+button.card-link-delete:hover{
+  border-bottom:2px solid #545D68;
+}
+
+ #updateForm > button:nth-child(11):hover{
+  
+
+  background-color: #545D68;
+  border-radius: 4px;
+  color: white;
+}
+
+.modal-title{
+  color: #497A72;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+}
+
+
+#myModal > div > div > div.modal-footer > button{
+  background-color:#497A72 ;
+  color:white;
+}
+
+#myModal > div > div > div.modal-footer > button:hover{
+  background-color:#545D68 ;
+  color:white;
+}
+
+.card-title{
+  color:#497A72;
+  font-weight: bold;
+
+}
+
+#gigEntryForm > button{
+  background-color: #497A72;
+  border:none;
+}
+
+#gigEntryForm > button:hover{
+  background-color: #545D68;
+  border:none;
+}
  
- 
+footer{
+  background-color: #f8f9fa;
+  padding-top:25px;
+  
+}
+
+
+
+
