@@ -19,6 +19,11 @@ body, html {
     position: relative;
 }
 
+.centre {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 
 
 
@@ -64,6 +69,11 @@ body, html {
   background: linear-gradient(90deg, white 50%,grey 50%);
  }
 
+ .mainContent{
+   background-color: white;
+   box-shadow: 5px 10px 8px 10px #888888;
+   
+ }
 
  .explore{
    margin-top:300px;
@@ -83,9 +93,6 @@ body, html {
  }
 
 
- #gigEntryForm{
-   width: 50%;
- }
   
 
  
