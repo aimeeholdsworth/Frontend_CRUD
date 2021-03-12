@@ -16,6 +16,9 @@ window.onscroll = function() {
 
 
 /* Card JS */
+var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+
+let id;
 const output = document.getElementById("output");
 
 function getAllGigs() {
@@ -78,6 +81,11 @@ function renderGig(gig) {
   const updateButton = document.createElement("button");
   updateButton.className = "card-link";
   updateButton.innerText = "Update";
+  updateButton.addEventListener('click', function () {
+    id = gig.id;
+    myModal.show();
+  
+  });
   gigFooter.appendChild(updateButton);
 
   return newLine;
@@ -125,6 +133,49 @@ document.getElementById("gigEntryForm").addEventListener('submit', function (eve
 });
 
 
+
+
+document.getElementById("updateForm").addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const data = {
+    artist: this.newArtist.value,
+    city: this.newCity.value,
+    venue: this.newVenue.value,
+    gigDate: this.newGigDate.value,
+    gigTime: this.newGigTime.value
+  };
+
+
+
+  
+  axios.put('http://localhost:8080/update/' + id, data, {
+    headers: {
+      "Content-Type": "application/json", // sending JSON
+      "Accept": "application/json"
+    }
+  })
+    .then(response => {
+      getAllGigs()
+    })
+    .catch(err => {
+      console.log(err);
+    });
+})
+
+//end of event listener update 
+
+function updateGig(id, newArtist, newCity, newVenue, newGigDate, newGigTime) {
+
+  const data = {
+
+    artist: newArtist.value,
+    city: newCity.value,
+    venue: newVenue.value,
+    gigDate: newGigDate.value,
+    gigTime: newGigTime.value
+  }
+}
 
 
 

@@ -142,8 +142,58 @@
          
         </div>
 
+              
+
       </section>
+
+
+
+
+
+  
+
     </main>
+
+    <!--Update  Modal -->
+    <!-- Trigger/Open The Modal -->
+    <div class="modal" tabindex="-1" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Update Entry</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body">
+            <form id ="updateForm">
+              <label for ="newArtist" class="form-control">New Artist</label>
+              <input name="newArtist" id="newArtist" class="form-control" autofocus>
+
+              <label for ="newCity" class="form-control">New City</label>
+              <input type="text" name="newCity" id="newCity" class="form-control">
+
+              <label for ="newVenue" class="form-control">New Venue</label>
+              <input type="text" name="newVenue" id="newVenue" class="form-control">
+
+              <label for ="newGigDate" class="form-control">New Date</label>
+              <input type="date" name="newGigDate" id="newGigDate" class="form-control">
+
+              <label for ="newGigTime" class="form-control">New Time</label>
+              <input type="number" name="newGigTime" id="newGigTime" class="form-control">
+
+              <button type="reset" class="btn btn-primary">Reset</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
