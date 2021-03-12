@@ -1,0 +1,92 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    
+  }
+
+  h1{
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+   
+  }
+
+.hero_image{
+    background-image: url(../Project1QA/img/crowd.jpg);
+    background-position: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+
+.hero_text h1{
+    font-size: 150px;
+}
+
+
+  .hero_text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+    border-radius: 20px;
+    padding:100px;
+    text-align: center;
+    
+    
+    
+  }
+
+
+  
+
+  .title{
+    font-size: 90px;
+    text-align: center;
+    text-decoration:underline;
+    z-index: 1;
+  }
+
+ .navbar{
+   box-shadow:#888888 ;
+   
+   
+ }
+
+ 
+
+ .content{
+  background: linear-gradient(90deg, white 50%,grey 50%);
+ }
+
+
+ .explore{
+   margin-top:300px;
+   border-radius: 25px;
+   background-color: white;
+   color:grey;
+   border: solid white 5px;
+   width: 200px;
+   font-size: 20px;
+   font-weight: bold;
+ }
+
+ .explore:hover{
+   background-color: transparent;
+   font-weight: bold;
+   color:white;
+ }
+
+
+ #gigEntryForm{
+   width: 50%;
+ }
+  
+
+ 
+ 
