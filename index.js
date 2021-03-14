@@ -7,6 +7,7 @@ let id;
 const output = document.getElementById("output");
 
 
+// draws in the gig data at local host and saves the data
 function getAllGigs() {
   axios.get("http://localhost:8080/getAllGigs/")
     .then(res => {
@@ -81,7 +82,7 @@ function renderGig(gig) {
 } /* end of render function*/
 
 
-
+//function to link the db and front end to delete a card
 function deleteGig(id) {
   axios.delete("http://localhost:8080/delete/" + id)
     .then(() => getAllGigs())
@@ -90,7 +91,7 @@ function deleteGig(id) {
 }
 
 
-
+//gets the entry form to submit data
 document.getElementById("gigEntryForm").addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -104,7 +105,7 @@ document.getElementById("gigEntryForm").addEventListener('submit', function (eve
   };
 
   
-
+//links to backend for creating a new entry
   axios.post("http://localhost:8080/createGig", data, {
     headers: {
       "Content-Type": "application/json", // sending JSON
@@ -120,7 +121,7 @@ document.getElementById("gigEntryForm").addEventListener('submit', function (eve
 
 
 
-
+//create an update function - links to the update form, updates when the submit button is clicked
 document.getElementById("updateForm").addEventListener('submit', function (event) {
   event.preventDefault();
 //overwrite the data so it updates
@@ -150,7 +151,7 @@ document.getElementById("updateForm").addEventListener('submit', function (event
 })
 
 //end of event listener update 
-
+//gets the data from the update form
 function updateGig(id, newArtist, newCity, newVenue, newGigDate, newGigTime) {
 
   const data = {
