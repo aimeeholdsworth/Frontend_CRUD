@@ -39,9 +39,9 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#main">Add Gig</a></li>
                   <li><a class="dropdown-item" href="#output">Update Gig</a></li>
-                  <li><a class="dropdown-item" href="#ouput">Delete Gig</a></li>
+                  <li><a class="dropdown-item" href="#output">Delete Gig</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#main">View All Gigs</a></li>
+                  <li><a class="dropdown-item" href="#output">View All Gigs</a></li>
                 </ul>
               </li>
               
@@ -69,16 +69,24 @@
         <div class ="hero_text col-6">
             <h1>Let's Party</h1>
             
-            <a href = "#main"><button class="explore">Explore Gigs</button></a>
+            <a href = "#about"><button class="explore">Explore</button></a>
         </div>
     </div>
 
 
     <main>
       <section class="col-md-12" id ="main">
+
+        <div class="about" id="about" >
+          <h1 class="title" >About</h1>
+          <p class="centre">Use this website to keep track off all the gigs you plan on going to, all accessible in one easy to view place.
+            Use the form below to add a new gig, which will then appear below in a list of all the gigs you've entered. Don't worry
+            if you make a mistake it's easy to update or delete a gig using the buttons on each box.
+          </p>
+        </div>
         
           <div class="content">
-        <h1 class="title">Upcoming Gigs</h1>
+        <h1 class="title">Add A Gig</h1>
         
         
         
@@ -86,7 +94,7 @@
         <div class="mainContent centre">
         <form id="gigEntryForm">
           <label for ="artist" class="form-control">Artist </label>
-          <input name="name" id="artist" class="form-control" autofocus>
+          <input name="name" id="artist" class="form-control" >
   
           <label for ="city" class="form-control">City</label>
           <input type="name" name="city" id="city" class="form-control">
@@ -106,7 +114,10 @@
 
       </div>
 
+      
+
       <!-- Where the cards go -->
+      <h1 class="title" id="upcoming">Upcoming Gigs</h1>
       <div id="output" class="m-2 card-group row row-cols-4 g-4"></div>
       
          

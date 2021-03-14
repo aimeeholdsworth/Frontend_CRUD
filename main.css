@@ -217,5 +217,19 @@ footer{
 }
 
 
+#upcoming{
+  margin-top:50px;
+}
 
+.about{
+  background-color: #EDEFEF;
+  padding-bottom:20px;
+ 
+}
 
+.about p{
+  margin-bottom:0px;
+  padding-bottom: 0px;
+  width:80%;
+  text-align: center;
+}
